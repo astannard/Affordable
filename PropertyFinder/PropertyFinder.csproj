@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Affordable\Affordable.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CsvHelper" />
+    <None Remove="Files\" />
+    <None Remove="Files\bank_statement.csv" />
+    <None Remove="Files\bank_statement_2.csv" />
+    <None Remove="Files\properties.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\bank_statement.csv" />
+    <Content Include="Files\bank_statement_2.csv" />
+    <Content Include="Files\properties.csv" />
+  </ItemGroup>
+</Project>
